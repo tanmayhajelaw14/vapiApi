@@ -16,8 +16,6 @@ def webhook():
 
     message = MessageSchema(unknown="exclude").load(request.json["message"])
 
-    print("\nEvent Type:", message.type)
-
     if message.transcript:
         print("Transcript:", message.transcript)
 
